@@ -7,7 +7,7 @@
       id="inputValue1"
       placeholder="Ingrese un numero"
       #inputValue1
-      (input)="updateValue1(inputValue1.value)"
+      [(ngModel)]="n1"
     />
   </div>
 </div>
@@ -20,7 +20,22 @@
       id="inputValue2"
       placeholder="Ingrese un numero"
       #inputValue2
-      (input)="updateValue2(inputValue2.value)"
+      [(ngModel)]="n2"
+    />
+  </div>
+</div>
+<div class="row mb-3">
+  <div class="col-12">
+    <label class="form-label" for="inputResult" [style.display]="hayRespuesta"
+      >Operación</label
+    >
+    <input
+      type="text"
+      class="form-control"
+      id="inputOperacion"
+      [style.display]="hayRespuesta"
+      disabled
+      [(ngModel)]="operacion"
     />
   </div>
 </div>
@@ -33,7 +48,7 @@
       id="inputResult"
       placeholder="Resultado"
       disabled
-      [value]="resultado"
+      [(ngModel)]="resultado"
     />
   </div>
 </div>
@@ -41,4 +56,6 @@
   [n1]="n1"
   [n2]="n2"
   (ans)="resultado = $event"
+  (op)="operacion = $event"
+  (borrarEvent)="borrar()"
 ></app-calc-actions>
