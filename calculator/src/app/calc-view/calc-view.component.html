@@ -1,0 +1,44 @@
+<div class="row mb-3">
+  <div class="col-12">
+    <label class="form-label" for="inputValue1">Valor 1</label>
+    <input
+      type="number"
+      class="form-control"
+      id="inputValue1"
+      placeholder="Ingrese un numero"
+      #inputValue1
+      (input)="updateValue1(inputValue1.value)"
+    />
+  </div>
+</div>
+<div class="row mb-3">
+  <div class="col-12">
+    <label class="form-label" for="inputValue2">Valor 2</label>
+    <input
+      type="number"
+      class="form-control"
+      id="inputValue2"
+      placeholder="Ingrese un numero"
+      #inputValue2
+      (input)="updateValue2(inputValue2.value)"
+    />
+  </div>
+</div>
+<div class="row mb-3">
+  <div class="col-12">
+    <label class="form-label" for="inputResult">Resultado</label>
+    <input
+      type="number"
+      class="form-control"
+      id="inputResult"
+      placeholder="Resultado"
+      disabled
+      [value]="resultado"
+    />
+  </div>
+</div>
+<app-calc-actions
+  [n1]="n1"
+  [n2]="n2"
+  (ans)="resultado = $event"
+></app-calc-actions>

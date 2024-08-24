@@ -1,0 +1,9 @@
+button.btn-dark {
+  width: 44px;
+  height: 44px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.col-btn {
+  text-align: center;
+}

@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  height: 80vh;
+  width: 50vh;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 10vh;
+}
+.form-calc {
+  justify-content: center;
+  border: 2px solid black;
+  border-radius: 8px;
+  padding: 24px;
+  width: 35vh;
+}
+
+h4 {
+  text-align: center;
+}
+h3 {
+  text-align: center;
+}

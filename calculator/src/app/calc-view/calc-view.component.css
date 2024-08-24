@@ -1,0 +1,12 @@
+input.form-control {
+  border: solid 1px black;
+}
+input.form-check-input {
+  border: solid 1px black;
+}
+.form-label {
+  font-weight: bold;
+}
+.col-12 {
+  text-align: center;
+}
